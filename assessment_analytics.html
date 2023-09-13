@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles.css">
+    <title>KPI Enterview</title>
+</head>
+<body>
+  <div class="input-container">
+        <form class="form">
+            <h2>Assessment Required</h2>
+            <h4>Preencha os campos abaixo de acordo com a Entrevista.</h4>
+            <hr> <br>
+            <p> 
+                1. Selecione a(s) ferramenta(s) de visualização desejada(s):
+            </p>
+            <input type="checkbox" id="processo-PBI" name="processo-1" value="Power BI">
+            <label for="Power BI"></label>Power BI</label>
+            <input type="checkbox" id="processo-TBL" name="processo-1" value="Tableau">
+            <label for="Tableau"></label>Tableau</label>
+            <input type="checkbox" id="processo-LKR" name="processo-1" value="Looker">
+            <label for="Looker"></label>Looker</label>
+            <input type="checkbox" id="processo-QLK" name="processo-1" value="Qlik">
+            <label for="Qlik"></label>Qlik</label>
+            <br><br>
+            <p>
+               2. Selecione o(s) Banco de dados desejado(s):
+            </p>
+            <input type="checkbox" id="processo-SRV" name="processo-2" value="SQL Server">
+            <label for="SQL Server"></label>SQL Server</label>
+            <input type="checkbox" id="processo-MQL" name="processo-2" value="My Sql">
+            <label for="My Sql"></label>My Sql</label>
+            <input type="checkbox" id="processo-BIG" name="processo-2" value="Big Query">
+            <label for="Big Query"></label>Big Query</label>
+            <br><br>
+            <p>
+                3. A INFRA será do cliente ou da contratada:
+            </p>
+            <input type="radio" id="processo-CLI" name="processo-3" value="Sim">
+            <label for="cliente"></label>Cliente</label>
+            <input type="radio" id="processo-CTR" name="processo-3" value="Não">
+            <label for="contratada"></label>Contratada</label>
+            <input type="radio" id="processo-MST" name="processo-3" value="Mista">
+            <label for="mista"></label>Mista</label>
+            <br><br>
+            <p> 
+                4. O cliente escolheu KPI personalizado:
+            </p>
+            <input type="radio" id="processo-K-SIM" name="processo-4" value="Sim">
+            <label for="Sim"></label>Sim</label>
+            <input type="radio" id="processo-K-NAO" name="processo-4" value="Não">
+            <label for="Custom"></label>Não</label>
+            <br><br>
+            <p> 
+                5. Selecione as opções de Dashboard:
+            </p>
+            <input type="radio" id="processo-STD" name="processo-5" value="Standard">
+            <label for="Standard"></label>Standard</label>
+            <input type="radio" id="processo-CST" name="processo-5" value="Custom">
+            <label for="Custom"></label>Custom</label>
+            <input type="radio" id="processo-MSA" name="processo-5" value="Mista">
+            <label for="Mista"></label>Mista</label>
+            <br><br>
+            <p> 
+                6. Selecione os processos que deseja incluir na solução:
+            </p>
+            <input type="checkbox" id="processo-FA" name="processo-6" value="FeA">
+            <label for="FeA"></label>F&A</label>
+            <input type="checkbox" id="processo-HTR" name="processo-6" value="HTR">
+            <label for="HTR"></label>HTR</label>
+            <input type="checkbox" id="processo-PRC" name="processo-6" value="Procurement">
+            <label for="Procurement"></label>Procurement</label>
+            <input type="checkbox" id="processo-RET" name="processo-6" value="Real Estate">
+            <label for="Real Estate"></label>Real Estate</label>
+            <input type="checkbox" id="processo-NET" name="processo-6" value="Real Estate">
+            <label for="Network"></label>Network</label>  
+            <br><br>
+        <div class="button">
+             <a href="https://niveamrs.github.io/WebsiteNivea/"><button id="calculate">Enviar o formulário</button></a>
+             <br>
+        </div>
+     </form>
+    </div>
+</body>
