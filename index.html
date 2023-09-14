@@ -1,200 +1,238 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style type="text/css">
-    <title>KPI  Enterview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css"></style>
+    <title>KPI Enterview</title>
 </head>
+
 <body>
-  <div class="input-container">
-        <form class="form">
-            <h2>Assessment Required</h2>
-            <h4>Preencha os campos abaixo de acordo com a Entrevista.</h4>
-            <hr> <br>
-            <p> 
-                1. Selecione a(s) ferramenta(s) de visualização desejada(s):
-            </p>
-            <input type="checkbox" id="processo-PBI" name="processo-1" value="Power BI">
-            <label for="Power BI"></label>Power BI</label>
-            <input type="checkbox" id="processo-TBL" name="processo-1" value="Tableau">
-            <label for="Tableau"></label>Tableau</label>
-            <input type="checkbox" id="processo-LKR" name="processo-1" value="Looker">
-            <label for="Looker"></label>Looker</label>
-            <input type="checkbox" id="processo-QLK" name="processo-1" value="Qlik">
-            <label for="Qlik"></label>Qlik</label>
-            <br><br>
-            <p>
-               2. Selecione o(s) Banco de dados desejado(s):
-            </p>
-            <input type="checkbox" id="processo-SRV" name="processo-2" value="SQL Server">
-            <label for="SQL Server"></label>SQL Server</label>
-            <input type="checkbox" id="processo-MQL" name="processo-2" value="My Sql">
-            <label for="My Sql"></label>My Sql</label>
-            <input type="checkbox" id="processo-BIG" name="processo-2" value="Big Query">
-            <label for="Big Query"></label>Big Query</label>
-            <br><br>
-            <p>
-                3. A INFRA será do cliente ou da contratada:
-            </p>
-            <input type="radio" id="processo-CLI" name="processo-3" value="Sim">
-            <label for="cliente"></label>Cliente</label>
-            <input type="radio" id="processo-CTR" name="processo-3" value="Não">
-            <label for="contratada"></label>Contratada</label>
-            <input type="radio" id="processo-MST" name="processo-3" value="Mista">
-            <label for="mista"></label>Mista</label>
-            <br><br>
-            <p> 
-                4. O cliente escolheu KPI personalizado:
-            </p>
-            <input type="radio" id="processo-K-SIM" name="processo-4" value="Sim">
-            <label for="Sim"></label>Sim</label>
-            <input type="radio" id="processo-K-NAO" name="processo-4" value="Não">
-            <label for="Custom"></label>Não</label>
-            <br><br>
-            <p> 
-                5. Selecione as opções de Dashboard:
-            </p>
-            <input type="radio" id="processo-STD" name="processo-5" value="Standard">
-            <label for="Standard"></label>Standard</label>
-            <input type="radio" id="processo-CST" name="processo-5" value="Custom">
-            <label for="Custom"></label>Custom</label>
-            <input type="radio" id="processo-MSA" name="processo-5" value="Mista">
-            <label for="Mista"></label>Mista</label>
-            <br><br>
-            <p> 
-                6. Selecione os processos que deseja incluir na solução:
-            </p>
-            <input type="checkbox" id="processo-FA" name="processo-6" value="FeA">
-            <label for="FeA"></label>F&A</label>
-            <input type="checkbox" id="processo-HTR" name="processo-6" value="HTR">
-            <label for="HTR"></label>HTR</label>
-            <input type="checkbox" id="processo-PRC" name="processo-6" value="Procurement">
-            <label for="Procurement"></label>Procurement</label>
-            <input type="checkbox" id="processo-RET" name="processo-6" value="Real Estate">
-            <label for="Real Estate"></label>Real Estate</label>
-            <input type="checkbox" id="processo-NET" name="processo-6" value="Real Estate">
-            <label for="Network"></label>Network</label>  
-            <br><br>
-        <div class="button">
-             <a href="https://niveamrs.github.io/WebsiteNivea/"><button id="calculate">Enviar o formulário</button></a>
-             <br>
+
+    <div style="display: grid;">
+
+        <div class="calculator">
+            <h1>Estimator Dashboards</h1>
+            <div class="input-container">
+                <div class="input-group">
+                    <input type="text" id="num1" placeholder="Standard">
+                    <span>Pack</span>
+                    <input type="number" id="num2" placeholder="0">
+                </div>
+
+                <p class="input-text">
+                    Quantidade
+                </p>
+
+                <div class="input-group">
+                    <input type="number" id="num3" placeholder="KPI">
+                    <span>Valor</span>
+                    <p id="result">
+                        <i class="fa-solid fa-xmark"></i>
+                    </p>
+                </div>
+            </div>
+
+            <button id="calculate" onclick="">
+                Calcular
+            </button>
         </div>
-     </form>
+        <div class="input-container">
+            <form class="form">
+                <h2>Assessment Required</h2>
+                <h4>Preencha os campos abaixo de acordo com a Entrevista.</h4>
+                <hr> <br>
+                <p>
+                    1. Selecione a(s) ferramenta(s) de visualização desejada(s):
+                </p>
+                <input type="checkbox" id="processo-PBI" name="processo-1" value="Power BI">
+                <label for="Power BI"></label>Power BI</label>
+                <input type="checkbox" id="processo-TBL" name="processo-1" value="Tableau">
+                <label for="Tableau"></label>Tableau</label>
+                <input type="checkbox" id="processo-LKR" name="processo-1" value="Looker">
+                <label for="Looker"></label>Looker</label>
+                <input type="checkbox" id="processo-QLK" name="processo-1" value="Qlik">
+                <label for="Qlik"></label>Qlik</label>
+                <br><br>
+                <p>
+                    2. Selecione o(s) Banco de dados desejado(s):
+                </p>
+                <input type="checkbox" id="processo-SRV" name="processo-2" value="SQL Server">
+                <label for="SQL Server"></label>SQL Server</label>
+                <input type="checkbox" id="processo-MQL" name="processo-2" value="My Sql">
+                <label for="My Sql"></label>My Sql</label>
+                <input type="checkbox" id="processo-BIG" name="processo-2" value="Big Query">
+                <label for="Big Query"></label>Big Query</label>
+                <br><br>
+                <p>
+                    3. A INFRA será do cliente ou da contratada:
+                </p>
+                <input type="radio" id="processo-CLI" name="processo-3" value="Sim">
+                <label for="cliente"></label>Cliente</label>
+                <input type="radio" id="processo-CTR" name="processo-3" value="Não">
+                <label for="contratada"></label>Contratada</label>
+                <input type="radio" id="processo-MST" name="processo-3" value="Mista">
+                <label for="mista"></label>Mista</label>
+                <br><br>
+                <p>
+                    4. O cliente escolheu KPI personalizado:
+                </p>
+                <input type="radio" id="processo-K-SIM" name="processo-4" value="Sim">
+                <label for="Sim"></label>Sim</label>
+                <input type="radio" id="processo-K-NAO" name="processo-4" value="Não">
+                <label for="Custom"></label>Não</label>
+                <br><br>
+                <p>
+                    5. Selecione as opções de Dashboard:
+                </p>
+                <input type="radio" id="processo-STD" name="processo-5" value="Standard">
+                <label for="Standard"></label>Standard</label>
+                <input type="radio" id="processo-CST" name="processo-5" value="Custom">
+                <label for="Custom"></label>Custom</label>
+                <input type="radio" id="processo-MSA" name="processo-5" value="Mista">
+                <label for="Mista"></label>Mista</label>
+                <br><br>
+                <p>
+                    6. Selecione os processos que deseja incluir na solução:
+                </p>
+                <input type="checkbox" id="processo-FA" name="processo-6" value="FeA">
+                <label for="FeA"></label>F&A</label>
+                <input type="checkbox" id="processo-HTR" name="processo-6" value="HTR">
+                <label for="HTR"></label>HTR</label>
+                <input type="checkbox" id="processo-PRC" name="processo-6" value="Procurement">
+                <label for="Procurement"></label>Procurement</label>
+                <input type="checkbox" id="processo-RET" name="processo-6" value="Real Estate">
+                <label for="Real Estate"></label>Real Estate</label>
+                <input type="checkbox" id="processo-NET" name="processo-6" value="Real Estate">
+                <label for="Network"></label>Network</label>
+                <br><br>
+                <div class="button">
+                    <a href="https://niveamrs.github.io/WebsiteNivea/"><button id="calculate">Enviar o formulário</button></a>
+                    <br>
+                </div>
+            </form>
+        </div>
+
+
     </div>
+
 </body>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
 
-:root {
-    --color-primary-1: #763bffd8;
-    --color-primary-2: #ff25bada;
+    :root {
+        --color-primary-1: #763bffd8;
+        --color-primary-2: #ff25bada;
 
-    --color-neutral-1: #e5e7eb;
-    --color-neutral-2:#343434;
-    --color-neutral-3: #262626;
+        --color-neutral-1: #e5e7eb;
+        --color-neutral-2: #343434;
+        --color-neutral-3: #262626;
 
-    --linear-gradient: linear-gradient(120deg, var(--color-primary-1), var(--color-primary-2));
-}
+        --linear-gradient: linear-gradient(120deg, var(--color-primary-1), var(--color-primary-2));
+    }
 
-* {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    * {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: var(--linear-gradient);
-}
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: var(--linear-gradient);
+    }
 
-.calculator {
-    background-color: var(--color-neutral-3);
-    color: var(--color-neutral-1);
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.323);
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-}
+    .calculator {
+        background-color: var(--color-neutral-3);
+        color: var(--color-neutral-1);
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.323);
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+    }
 
-.input-container {
-    margin: 25px 0px;
-}
+    .input-container {
+        margin: 25px 0px;
+    }
 
-.input-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .input-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.input-group input {
-    background-color: var(--color-neutral-2);
-    color: var(--color-neutral-1);
-    padding: 8px;
-    border: 1px solid var(--color-primary-1);
-    border-radius: 4px;
-    width: 100px;
-    font-size: 16px;
-    text-align: center;
-}
+    .input-group input {
+        background-color: var(--color-neutral-2);
+        color: var(--color-neutral-1);
+        padding: 8px;
+        border: 1px solid var(--color-primary-1);
+        border-radius: 4px;
+        width: 100px;
+        font-size: 16px;
+        text-align: center;
+    }
 
-.input-group input:focus-visible {
-    outline: transparent;
-}
+    .input-group input:focus-visible {
+        outline: transparent;
+    }
 
-.input-group span {
-    background-color: var(--color-neutral-2);
-    padding: 0px 15px;
-}
+    .input-group span {
+        background-color: var(--color-neutral-2);
+        padding: 0px 15px;
+    }
 
-.input-group p {
-    background: var(--linear-gradient);
-    border-radius: 4px;
-    padding: 10px;
-    width: 100px;
-}
+    .input-group p {
+        background: var(--linear-gradient);
+        border-radius: 4px;
+        padding: 10px;
+        width: 100px;
+    }
 
-.input-text {
-    margin: 15px 0px;
-}
+    .input-text {
+        margin: 15px 0px;
+    }
 
-#calculate {
-    background: var(--linear-gradient);
-    border: none;
-    color: var(--color-neutral-1);
-    border-radius: 4px;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color .5s ease;
-}
+    #calculate {
+        background: var(--linear-gradient);
+        border: none;
+        color: var(--color-neutral-1);
+        border-radius: 4px;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color .5s ease;
+    }
 
-#calculate:hover {
-    background-color: var(--color-primary-2);
-}
+    #calculate:hover {
+        background-color: var(--color-primary-2);
+    }
 
-.form {
-    /* Apenas para centralizar o form na página */
-    margin: 0 auto;
-    width: 550px;
-    /* Para ver as bordas do formulário */
-    padding: 1em;
-    border: 1px solid #ccc;
-    border-radius: 2em;
-    /*incluindo a padronização do plano de findo*/
-    background-color: var(--color-neutral-3);
-    color: var(--color-neutral-1);
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.323);
-  }
+    .form {
+        /* Apenas para centralizar o form na página */
+        margin: 0 auto;
+        width: 550px;
+        /* Para ver as bordas do formulário */
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 2em;
+        /*incluindo a padronização do plano de findo*/
+        background-color: var(--color-neutral-3);
+        color: var(--color-neutral-1);
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.323);
+    }
 
-h2, h4 {
-    text-align: center;
-}
+    h2,
+    h4 {
+        text-align: center;
+    }
 </style>
